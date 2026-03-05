@@ -169,18 +169,18 @@ const selectStore = (store) => {
 <style scoped>
 .consumer-home {
   min-height: 100vh;
-  background: #f5f5f5;
-  padding: 0 10px 20px;
+  background: transparent;
+  padding: 0 12px 24px;
 }
 
 .location-bar {
-  background: white;
-  padding: 10px 16px;
-  margin: 0 -10px;
+  background: linear-gradient(135deg, #f4fff4, #ffffff);
+  padding: 12px 16px;
+  margin: 0 -12px 8px;
   display: flex;
   align-items: center;
-  gap: 5px;
-  border-bottom: 1px solid #f0f0f0;
+  gap: 8px;
+  border-bottom: 1px solid #e5f1e2;
 }
 
 .location-text {
@@ -190,9 +190,10 @@ const selectStore = (store) => {
 }
 
 .swipe {
-  margin: 10px 0;
-  border-radius: 8px;
+  margin: 12px 0;
+  border-radius: 14px;
   overflow: hidden;
+  box-shadow: 0 10px 22px rgba(25, 71, 34, 0.12);
 }
 
 .banner-img {
@@ -202,36 +203,43 @@ const selectStore = (store) => {
 }
 
 .quick-grid {
-  background: white;
-  border-radius: 8px;
-  margin: 10px 0;
+  background: #fff;
+  border-radius: 14px;
+  margin: 12px 0;
+  box-shadow: 0 6px 20px rgba(23, 88, 37, 0.08);
 }
 
 .quick-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 6px;
+  padding: 8px 0;
 }
 
 .quick-item span {
-  margin-top: 5px;
   font-size: 12px;
+  color: #374937;
 }
 
 .section {
-  margin: 15px 0;
+  margin: 16px 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(24, 82, 38, 0.08);
 }
 
 .group-buy-preview {
-  padding: 10px;
+  padding: 8px 12px 12px;
+  background: #fff;
 }
 
 .preview-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 0;
-  border-bottom: 1px solid #f0f0f0;
+  padding: 12px 0;
+  border-bottom: 1px solid #eef3ee;
 }
 
 .preview-item:last-child {
@@ -244,7 +252,8 @@ const selectStore = (store) => {
 
 .preview-name {
   font-size: 14px;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
+  font-weight: 600;
 }
 
 .preview-price {
@@ -255,15 +264,17 @@ const selectStore = (store) => {
 }
 
 .store-list {
-  padding: 10px;
+  padding: 12px;
+  background: #fff;
 }
 
 .store-item {
-  background: #f8f8f8;
-  border-radius: 6px;
+  background: linear-gradient(130deg, #f7fcf6, #ffffff);
+  border-radius: 10px;
   padding: 12px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   cursor: pointer;
+  border: 1px solid #ebf3e8;
 }
 
 .store-info {
@@ -275,6 +286,7 @@ const selectStore = (store) => {
 .store-name {
   font-weight: 500;
   font-size: 14px;
+  color: #243124;
 }
 
 .store-distance {
@@ -294,14 +306,17 @@ const selectStore = (store) => {
 }
 
 .recommend-grid {
-  padding: 10px;
+  padding: 12px;
+  background: #fff;
 }
 
 .recommend-item {
   text-align: center;
   background: white;
-  border-radius: 8px;
-  padding: 8px;
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #edf3eb;
+  box-shadow: 0 4px 16px rgba(35, 83, 44, 0.07);
 }
 
 .recommend-name {

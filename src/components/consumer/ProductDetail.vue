@@ -230,12 +230,16 @@ const goToCart = () => {
 <style scoped>
 .product-detail {
   min-height: 100vh;
-  background: #f5f5f5;
-  padding-bottom: 60px;
+  background: transparent;
+  padding-bottom: 72px;
 }
 
 .product-swipe {
-  width: 100%;
+  width: calc(100% - 24px);
+  margin: 10px 12px 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(25, 83, 40, 0.15);
 }
 
 .product-image {
@@ -246,154 +250,58 @@ const goToCart = () => {
 
 .product-info {
   background: white;
-  padding: 15px;
-  margin: 10px;
-  border-radius: 8px;
+  padding: 16px;
+  margin: 12px;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(26, 84, 39, 0.08);
 }
 
-.price-section {
-  margin-bottom: 10px;
-}
-
-.price {
-  font-size: 28px;
-  font-weight: bold;
-  color: #ee0a24;
-}
-
-.unit {
-  font-size: 14px;
-  color: #999;
-  margin-left: 4px;
-}
-
-.original-price {
-  font-size: 14px;
-  color: #999;
-  text-decoration: line-through;
-  margin-left: 10px;
-}
-
-.title-section {
-  margin-bottom: 10px;
-}
-
-.title {
-  font-size: 18px;
-  margin: 0 0 8px 0;
-}
-
-.tags {
-  display: flex;
-  gap: 5px;
-  flex-wrap: wrap;
-}
+.price-section { margin-bottom: 12px; }
+.price { font-size: 30px; font-weight: 700; color: #dd4b39; }
+.unit { font-size: 14px; color: #8a8a8a; margin-left: 4px; }
+.original-price { font-size: 13px; color: #9ea39e; text-decoration: line-through; margin-left: 10px; }
+.title-section { margin-bottom: 12px; }
+.title { font-size: 18px; margin: 0 0 10px 0; color: #253325; }
+.tags { display: flex; gap: 6px; flex-wrap: wrap; }
 
 .meta-section {
-  display: flex;
-  gap: 20px;
-  padding: 10px 0;
-  border-top: 1px solid #f0f0f0;
-  border-bottom: 1px solid #f0f0f0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding: 12px 0;
+  border-top: 1px solid #edf3eb;
+  border-bottom: 1px solid #edf3eb;
 }
 
-.meta-item {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 13px;
-  color: #666;
-}
+.meta-item { display: flex; align-items: center; gap: 4px; font-size: 12px; color: #657365; }
 
 .trace-entry {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-top: 10px;
-  padding: 8px;
-  background: #f0fff0;
-  border-radius: 4px;
-  color: #07c160;
+  margin-top: 12px;
+  padding: 10px;
+  background: linear-gradient(90deg, #edf9eb, #f8fdf8);
+  border-radius: 8px;
+  color: #2f8f3a;
   cursor: pointer;
 }
+.trace-entry span { flex: 1; }
 
-.trace-entry span {
-  flex: 1;
-}
-
-.section {
-  margin: 15px 10px;
-}
-
-.process-services {
-  padding: 10px;
-}
-
-.service-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 0;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.service-item:last-child {
-  border-bottom: none;
-}
-
-.service-price {
-  color: #07c160;
-  font-weight: 500;
-}
-
-.detail-content {
-  padding: 15px;
-  font-size: 14px;
-  line-height: 1.6;
-  color: #666;
-}
-
-.reviews {
-  padding: 10px;
-}
-
-.review-item {
-  padding: 10px 0;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.review-item:last-child {
-  border-bottom: none;
-}
-
-.review-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.review-user {
-  flex: 1;
-  margin-left: 8px;
-}
-
-.review-user .name {
-  display: block;
-  font-size: 13px;
-  font-weight: 500;
-}
-
-.review-time {
-  font-size: 12px;
-  color: #999;
-}
-
-.review-content {
-  margin: 0;
-  font-size: 13px;
-  color: #666;
-  line-height: 1.5;
-}
+.section { margin: 14px 12px; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 20px rgba(24, 82, 38, 0.08); }
+.process-services { padding: 12px; background:#fff; }
+.service-item { display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid #edf2ec; }
+.service-item:last-child { border-bottom:none; }
+.service-price { color:#2f8f3a; font-weight:600; }
+.detail-content { padding:16px; font-size:14px; line-height:1.7; color:#5f6c5f; background:#fff; }
+.reviews { padding:12px; background:#fff; }
+.review-item { padding:12px 0; border-bottom:1px solid #edf2ec; }
+.review-item:last-child { border-bottom:none; }
+.review-header { display:flex; align-items:center; margin-bottom:8px; }
+.review-user { flex:1; margin-left:8px; }
+.review-user .name { display:block; font-size:13px; font-weight:600; }
+.review-time { font-size:12px; color:#9aa09a; }
+.review-content { margin:0; font-size:13px; color:#5f6b5f; line-height:1.6; }
 
 .bottom-bar {
   position: fixed;
@@ -402,58 +310,18 @@ const goToCart = () => {
   right: 0;
   display: flex;
   align-items: center;
-  padding: 8px 16px;
-  background: white;
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 -4px 18px rgba(0,0,0,0.08);
+  backdrop-filter: blur(8px);
   z-index: 10;
 }
 
-.cart-icon {
-  position: relative;
-  padding: 8px;
-  margin-right: 15px;
-}
-
-.cart-badge {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: #ee0a24;
-  color: white;
-  font-size: 10px;
-  min-width: 16px;
-  height: 16px;
-  line-height: 16px;
-  text-align: center;
-  border-radius: 8px;
-}
-
-.action-buttons {
-  flex: 1;
-  display: flex;
-  gap: 10px;
-}
-
-.action-buttons .van-button {
-  flex: 1;
-}
-
-.spec-content {
-  padding: 20px;
-  max-height: 300px;
-  overflow-y: auto;
-}
-
-.spec-option {
-  padding: 12px;
-  text-align: center;
-  border: 1px solid #f0f0f0;
-  border-radius: 4px;
-  margin-bottom: 8px;
-  cursor: pointer;
-}
-
-.spec-option:active {
-  background: #f0f0f0;
-}
+.cart-icon { position:relative; padding:8px; margin-right:10px; background:#f3f8f3; border-radius:12px; }
+.cart-badge { position:absolute; top:-4px; right:-3px; background:#e84d37; color:white; font-size:10px; min-width:16px; height:16px; line-height:16px; text-align:center; border-radius:8px; }
+.action-buttons { flex:1; display:flex; gap:10px; }
+.action-buttons .van-button { flex:1; }
+.spec-content { padding:20px; max-height:300px; overflow-y:auto; }
+.spec-option { padding:12px; text-align:center; border:1px solid #e5ece3; border-radius:8px; margin-bottom:8px; cursor:pointer; background:#fff; }
+.spec-option:active { background:#f3f7f2; }
 </style>

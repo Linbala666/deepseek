@@ -121,89 +121,62 @@ const onClickLeft = () => {
 <style scoped>
 .consumer-cart {
   min-height: 100vh;
-  background: #f5f5f5;
+  background: transparent;
 }
 
 .empty-cart {
   text-align: center;
-  padding: 100px 20px;
+  padding: 110px 20px;
 }
 
 .empty-cart p {
   margin: 20px 0;
-  color: #999;
+  color: #7d887d;
 }
 
 .cart-content {
-  padding: 10px;
-  padding-bottom: 70px;
+  padding: 12px;
+  padding-bottom: 78px;
 }
 
 .cart-list {
-  background: white;
-  border-radius: 8px;
-  padding: 10px;
-  margin-bottom: 10px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 8px 22px rgba(28, 87, 42, 0.08);
 }
 
 .cart-item {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: auto 74px 1fr;
+  align-items: start;
   gap: 10px;
-  padding: 15px 0;
-  border-bottom: 1px solid #f0f0f0;
+  padding: 14px 0;
+  border-bottom: 1px solid #edf3eb;
 }
 
-.cart-item:last-child {
-  border-bottom: none;
-}
-
-.item-info {
-  flex: 1;
-}
-
-.item-name {
-  font-weight: 500;
-  font-size: 15px;
-  margin-bottom: 4px;
-}
-
-.item-price {
-  color: #ee0a24;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.group-tip {
-  margin: 10px 0;
-}
+.cart-item:last-child { border-bottom: none; }
+.item-info { min-width: 0; }
+.item-name { font-weight: 600; font-size: 15px; margin-bottom: 6px; color:#253325; }
+.item-price { color: #db4d2f; font-weight: 700; margin-bottom: 10px; }
+.group-tip { margin: 10px 0 14px; border-radius:12px; overflow:hidden; }
 
 .cart-footer {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  background: white;
+  background: rgba(255, 255, 255, 0.96);
   display: flex;
   align-items: center;
   padding: 12px 16px;
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 -4px 18px rgba(0,0,0,0.08);
+  backdrop-filter: blur(8px);
   z-index: 10;
 }
 
-.cart-footer .van-checkbox {
-  flex: 1;
-}
-
-.total {
-  margin-right: 15px;
-  font-size: 14px;
-  color: #666;
-}
-
-.total-price {
-  color: #ee0a24;
-  font-size: 18px;
-  font-weight: bold;
-}
+.cart-footer .van-checkbox { flex: 1; }
+.total { margin-right: 12px; font-size: 14px; color: #5f6f5f; }
+.total-price { color: #db4d2f; font-size: 20px; font-weight: 700; }
 </style>

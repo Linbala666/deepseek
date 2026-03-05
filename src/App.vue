@@ -79,15 +79,41 @@ const menuItems = computed(() => {
 </script>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --theme-green: #2e7d32;
+  --theme-green-light: #4caf50;
+  --theme-bg: #f3f7f2;
+  --theme-card: #ffffff;
+  --theme-text: #1f2d1f;
+  --theme-subtext: #6f7c6f;
+  --theme-shadow: 0 8px 24px rgba(30, 83, 45, 0.08);
+}
+
+body {
+  margin: 0;
+  background: var(--theme-bg);
+  color: var(--theme-text);
+}
+
 .app {
   padding-bottom: 50px;
   min-height: 100vh;
-  background-color: #f5f5f5;
+  background: linear-gradient(180deg, #eef7ec 0%, #f7f9f7 320px, #f3f7f2 100%);
 }
 
 /* 确保所有页面内容不会被底部导航遮挡 */
 .van-nav-bar--fixed + *,
 .van-tabs--fixed + * {
   margin-top: 46px;
+}
+
+.van-tabbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid #dbe7d9;
 }
 </style>

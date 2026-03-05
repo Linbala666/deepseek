@@ -104,44 +104,51 @@ const onClickLeft = () => {
 <style scoped>
 .category {
   min-height: 100vh;
-  background: #f5f5f5;
+  background: transparent;
 }
 
 .category-container {
   display: flex;
   margin-top: 46px;
   min-height: calc(100vh - 96px);
+  border-radius: 14px 14px 0 0;
+  overflow: hidden;
 }
 
 .van-sidebar {
-  width: 100px;
-  background: white;
+  width: 104px;
+  background: #f8fbf7;
+  border-right: 1px solid #e4ece1;
 }
 
 .product-grid {
   flex: 1;
-  padding: 10px;
+  padding: 12px;
   overflow-y: auto;
+  background: #fff;
 }
 
 .product-card {
   text-align: center;
-  background: white;
-  border-radius: 8px;
-  padding: 8px;
+  background: linear-gradient(180deg, #ffffff, #f8fcf8);
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #e9f0e7;
+  box-shadow: 0 6px 18px rgba(23, 90, 37, 0.08);
 }
 
 .product-name {
   font-size: 13px;
-  margin: 5px 0 2px;
+  margin: 8px 0 4px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #2d3a2d;
 }
 
 .product-price {
-  color: #ee0a24;
+  color: #d84a2e;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
 }
 </style>
