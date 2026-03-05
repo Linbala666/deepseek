@@ -150,127 +150,70 @@ const setDefaultStore = () => {
 <style scoped>
 .stores-page {
   min-height: 100vh;
-  background: #f5f5f5;
-  padding: 10px;
+  background: transparent;
+  padding: 12px;
 }
 
 .map-placeholder {
-  margin: 60px 0 15px;
+  margin: 60px 0 16px;
   background: white;
-  border-radius: 8px;
-  padding: 20px;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 8px 22px rgba(24, 82, 38, 0.08);
 }
 
 .map-container {
   height: 180px;
-  background: #f0f9ff;
-  border-radius: 8px;
+  background: linear-gradient(140deg, #ebf7ea, #f9fdf8);
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #666;
+  color: #667566;
 }
 
-.map-tip {
-  font-size: 12px;
-  color: #07c160;
-  margin-top: 8px;
-}
+.map-tip { font-size: 12px; color: #2f8f3a; margin-top: 8px; }
 
 .store-card {
-  background: white;
-  border-radius: 8px;
+  background: linear-gradient(140deg, #ffffff, #f7fcf6);
+  border-radius: 10px;
   padding: 12px;
   margin: 10px;
   cursor: pointer;
+  border: 1px solid #e8f0e5;
 }
 
-.store-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-}
+.store-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.store-name { display: flex; align-items: center; gap: 6px; font-weight: 600; color:#243124; }
+.store-address { font-size: 13px; color: #5e6d5e; margin-bottom: 8px; padding-left: 22px; }
+.store-footer { display: flex; justify-content: space-between; align-items: center; padding-left: 22px; }
+.store-time { font-size: 12px; color: #889688; }
+.store-phone { padding: 4px 8px; }
 
-.store-name {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-weight: 500;
-}
-
-.store-address {
-  font-size: 13px;
-  color: #666;
-  margin-bottom: 8px;
-  padding-left: 20px;
-}
-
-.store-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 20px;
-}
-
-.store-time {
-  font-size: 12px;
-  color: #999;
-}
-
-.store-phone {
-  padding: 4px 8px;
-}
-
-.frequent-list {
-  padding: 10px;
-}
+.frequent-list { padding: 10px; }
 
 .frequent-item {
-  background: #f8f8f8;
-  border-radius: 6px;
+  background: #f7fbf6;
+  border-radius: 8px;
   padding: 12px;
   margin-bottom: 8px;
   cursor: pointer;
+  border: 1px solid #e8f0e5;
 }
 
-.frequent-item:active {
-  background: #f0f0f0;
-}
-
-.frequent-name {
-  font-weight: 500;
-  margin-bottom: 4px;
-}
-
-.frequent-address {
-  font-size: 12px;
-  color: #666;
-}
-
-.store-detail {
-  padding: 20px;
-}
+.frequent-item:active { background: #eef6ec; }
+.frequent-name { font-weight: 600; margin-bottom: 4px; color:#2a382a; }
+.frequent-address { font-size: 12px; color: #647364; }
+.store-detail { padding: 20px; }
 
 .detail-info {
-  background: #f8f8f8;
-  border-radius: 8px;
+  background: #f5faf4;
+  border-radius: 10px;
   padding: 15px;
   margin-bottom: 20px;
+  color:#506050;
 }
 
-.detail-info p {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 8px 0;
-  color: #666;
-}
-
-.detail-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+.detail-actions { display: grid; gap: 10px; }
 </style>
